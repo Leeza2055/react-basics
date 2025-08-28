@@ -1,19 +1,21 @@
-import { useState } from "react";
-import { AddNum } from "./components/AddNum";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Layout } from "./layouts/Layout";
+import { Home } from "./pages/Home";
+import { NopPage } from "./pages/NopPage";
+import { PostCreate } from "./pages/PostCreate";
 
 function App() {
-  const myClass = "text-3xl font-bold mb-4";
-  const [count, setCount] = useState(0);
-
-  const handleAdd = () => {
-    setCount(count + 1);
-  };
-
   return (
     <>
-      <AddNum myStyle={myClass} handleAdd={handleAdd} count={count}>
-        <h1 className="bg-red-500 p-4">Child Element</h1>
-      </AddNum>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/create" element={<PostCreate />} />
+            <Route path="*" element={<NopPage />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
