@@ -14,6 +14,12 @@ export function Layout() {
               SimpleEx
             </Link>
             <Link
+              to="/form"
+              className="px-3 py-1 rounded-md hover:bg-indigo-600 hover:text-white"
+            >
+              FormEx
+            </Link>
+            <Link
               to="/home"
               className="px-3 py-1 rounded-md hover:bg-indigo-600 hover:text-white"
             >
