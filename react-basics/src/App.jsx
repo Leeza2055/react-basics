@@ -5,6 +5,7 @@ import { NopPage } from "./pages/NopPage";
 import { PostCreate } from "./pages/PostCreate";
 import { SimpleEx } from "./pages/SimpleEx";
 import { FormEx } from "./pages/FormEx";
+import { ObjectEx } from "./pages/ObjectEx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<SimpleEx />} />
             <Route path="/form" element={<FormEx />} />
+            <Route path="/object" element={<ObjectEx />} />
             {/* <Route index element={<Home />} /> */}
             <Route path="/home" element={<Home />} />
             <Route path="/create" element={<PostCreate />} />
